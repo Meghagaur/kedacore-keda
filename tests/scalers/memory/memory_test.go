@@ -28,7 +28,7 @@ var (
 	workloadDeploymentName = fmt.Sprintf("%s-workload-deployment", testName)
 	minReplicas            = 0
 	maxReplicas            = 5
-	utilizationValue       = 45 // downScale value
+	utilizationValue       = 50 // downScale value
 )
 
 type templateData struct {
@@ -97,7 +97,7 @@ spec:
           policies:
           - type: Pods
             value: 1
-            periodSeconds: 10
+            periodSeconds: 60
           stabilizationWindowSeconds: 0
   maxReplicaCount: 2
   minReplicaCount: 1
@@ -171,7 +171,7 @@ spec:
               type: RuntimeDefault`
 
 	scaleUpValue   = 1
-	scaleDownValue = 45
+	scaleDownValue = 50
 )
 
 func TestMemoryScaler(t *testing.T) {
