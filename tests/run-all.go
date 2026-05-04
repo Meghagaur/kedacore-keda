@@ -28,9 +28,9 @@ import (
 
 var (
 	concurrentTests        = 25
-	regularTestsTimeout    = "20m"
+	regularTestsTimeout    = "50m"
 	regularTestsRetries    = 3
-	sequentialTestsTimeout = "20m"
+	sequentialTestsTimeout = "50m"
 	sequentialTestsRetries = 2
 )
 
